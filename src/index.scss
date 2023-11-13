@@ -1,0 +1,229 @@
+@import "src/scss/variables";
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif !important;
+}
+body{
+  background: $background-black;
+}
+.flex-center{
+  display: flex;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flex-center-base{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.g-5{
+  gap: 0.5rem;
+}
+.g-1{
+  gap: 1rem;
+}
+.g-07{
+  gap: .7rem;
+}
+.g-3{
+  gap: 0.3rem;
+}
+.flex-center-align{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-space{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-start{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex-space{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-col-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flex-col-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flex-col-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.text-center{
+  text-align: center;
+}
+.primary-text {
+  color: $text-color;
+  font-weight: 550;
+  font-size: 16px;
+}
+.redux-text{
+  padding-top: .3rem;
+  color: $secondary-color;
+  font-weight: 550;
+  font-size: 2rem;
+}
+.scroll-y{
+  overflow-y: scroll;
+}
+.white-text{
+  color: $text-color;
+}
+.secondary-text {
+  color: rgb(140 139 139);
+  font-size: 0.9rem;
+}
+.input-base-color{
+  color: $text-color;
+  background: $input-bg;
+}
+.input-base{
+  flex: 1;
+  color: $text-color;
+  background: $input-bg;
+  text-align: start;
+  padding: .8rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  &::placeholder{
+    color: $text-color;
+  }
+  &:focus{
+    border: 2px solid $secondary-color;
+    outline: none;
+  }
+}
+.area-height{
+  height: 10rem;
+}
+.btn-primary{
+  font-weight: 550;
+  color: $text-color;
+  background: $secondary-color;
+  width: fit-content;
+  padding: .5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  font-size: 14px;
+  transition: all 300ms ease-in;
+  margin-top: 0;
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.012);
+    opacity: 0.9;
+    background: $secondary-color;
+    box-shadow: 0 0 .3em $black;
+  }
+}
+.btn-large{
+  width: 20%;
+}
+.mg-1{
+ margin: 1rem;
+}
+.mg-r-1{
+  margin-right: 1rem;
+}
+.mg-2{
+  margin: 2rem;
+}
+.mg-t-2{
+  margin-top: 2rem;
+}
+.padding-base{
+  padding: 1.5rem;
+}
+.inner-width{
+  width: 100%;
+}
+.header{
+  font-size: 32px;
+}
+.grid-2-c{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (min-width: 1400px) {
+  .inner-width{
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+@media (min-width: 640px) {
+  .padding-base{
+    padding: 4rem;
+  }
+}
+@media (min-width: 1280px), (min-width: 768px) {
+  .padding-base {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .primary-text {
+    font-size: 1.5rem;
+  }
+  .orange-text {
+    font-size: 1.2rem;
+  }
+}
+::selection {
+  background: $secondary-color;
+  color: $black;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  background: $black;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 11px;
+  background: $secondary-color;
+}

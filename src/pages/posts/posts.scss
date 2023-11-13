@@ -1,0 +1,71 @@
+@import "src/scss/mixins";
+.all-posts-container{
+  padding: .5rem;
+  margin-left: 2rem;
+  background-color: $secondary-black;
+  border-radius: 16px;
+  color: $text-color;
+  height: 75dvh;
+  box-shadow: rgba(255, 255, 255, 0.05) 0 3px 12px;
+  border: 1px solid $input-bg;
+}
+.posts-container{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1rem;
+}
+.posts-search{
+  flex: 1;
+  @include input-base;
+  padding: .5rem;
+  color: $text-color;
+  input{
+    outline: none;
+    background: transparent;
+    border: none;
+    color: $text-color;
+  }
+}
+.post-card{
+  border-radius: 16px;
+  display: grid;
+  padding: .5rem;
+  grid-template-columns: .5fr 1.2fr .8fr;
+  background: $primary-black-bg;
+  border: 1px solid $secondary-color;
+  transition: all 200ms ease;
+  img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover {
+    border: 1px solid $text-color;
+    cursor: pointer;
+    box-shadow: 0 0 .3rem $text-color;
+  }
+  .post-card__content{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    h3{
+      font-size: 16px;
+      font-weight: 550;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+  .post-card__actions{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: .5rem;
+  }
+}
+.posts-map{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}

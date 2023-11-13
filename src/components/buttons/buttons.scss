@@ -1,0 +1,23 @@
+@import "src/scss/variables";
+@mixin button-base-mx{
+  font-weight: 550;
+  padding: .5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  font-size: 14px;
+  transition: all 200ms ease-in;
+  margin-top: 0;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    box-shadow: 0 0 .3em $primary-color;
+  }
+}
+.button-base-icon{
+  @include button-base-mx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
